@@ -1,0 +1,43 @@
+/* eslint-disable max-len */
+export default {
+  blacklistTemplate:
+    'https://shanks-prod.oss-cn-shenzhen.aliyuncs.com/shanks-manager/public/%E9%BB%91%E5%90%8D%E5%8D%95%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  rosterTemplate:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruitment/%E8%8A%B1%E5%90%8D%E5%86%8C%E6%9B%B4%E6%96%B0%E6%A8%A1%E6%9D%BF.xlsx',
+  recruitTemplate:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/noPuls/%E8%87%AA%E6%8B%9B%E5%9C%A8%E8%81%8C%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  recruitPulsTemplate:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/plus%E8%87%AA%E6%8B%9B%E5%9C%A8%E8%81%8C%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  supplierTemplateFalse:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/noPuls/%E4%BE%9B%E5%BA%94%E5%95%86%E5%9C%A8%E8%81%8C%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  supplierPulsTemplateFalse:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/plus%E4%BE%9B%E5%BA%94%E5%95%86%E5%9C%A8%E8%81%8C%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  departureTemplate:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/%E7%A6%BB%E8%81%8C%E6%9B%B4%E6%96%B0%E6%A8%A1%E6%9D%BF.xlsx',
+  supplierManagementTemplate:
+    'https://shanks-prod.oss-cn-shenzhen.aliyuncs.com/shanks-manager/public/%E4%BE%9B%E5%BA%94%E5%95%86%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF%20%286%29.xlsx',
+  lastRecruitTemplate:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/noPuls/%E6%9C%80%E6%96%B0%E8%87%AA%E6%8B%9B%E8%AE%A2%E5%8D%95%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  lastRecruitPulsTemplate:
+    ' https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/puls/plus%E6%9C%80%E6%96%B0%E8%87%AA%E6%8B%9B%E8%AE%A2%E5%8D%95%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  lastSupplierTemplateFalse:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/noPuls/%E6%9C%80%E6%96%B0%E4%BE%9B%E5%BA%94%E5%95%86%E8%AE%A2%E5%8D%95%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  lastSupplierPulsTemplateFalse:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/puls/plus%E6%9C%80%E6%96%B0%E4%BE%9B%E5%BA%94%E5%95%86%E8%AE%A2%E5%8D%95%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  historyRecruitTemplate:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/noPuls/%E5%8E%86%E5%8F%B2%E8%87%AA%E6%8B%9B%E8%AE%A2%E5%8D%95%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  historyRecruitPulsTemplate:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/puls/plus%E5%8E%86%E5%8F%B2%E8%87%AA%E6%8B%9B%E8%AE%A2%E5%8D%95%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  historySupplierTemplate:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/%E5%8E%86%E5%8F%B2%E4%BE%9B%E5%BA%94%E5%95%86%E8%AE%A2%E5%8D%95%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  historySupplierPulsTemplate:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/puls/%E5%8E%86%E5%8F%B2%E4%BE%9B%E5%BA%94%E5%95%86%E8%AE%A2%E5%8D%95%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  historySupplierTemplateFalse:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/noPuls/%E5%8E%86%E5%8F%B2%E4%BE%9B%E5%BA%94%E5%95%86%E8%AE%A2%E5%8D%95%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  historySupplierPulsTemplateFalse:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/puls/plus%E5%8E%86%E5%8F%B2%E4%BE%9B%E5%BA%94%E5%95%86%E8%AE%A2%E5%8D%95%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx',
+  blacklistCheckTemplate:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/%E5%8F%91%E8%96%AA%E7%B3%BB%E7%BB%9F-%E9%BB%91%E5%90%8D%E5%8D%95%E6%A0%A1%E9%AA%8C%E6%A8%A1%E6%9D%BF.xlsx',
+  jobNumberTemplate:
+    'https://labor-static.oss-cn-shenzhen.aliyuncs.com/template/recruit/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-%E5%AF%BC%E5%85%A5%E5%B7%A5%E5%8F%B7%E6%A8%A1%E6%9D%BF.xlsx',
+};

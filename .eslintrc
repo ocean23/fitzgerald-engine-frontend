@@ -1,0 +1,56 @@
+{
+  "extends": [
+    // "react-app",
+    "react-app/jest",
+    "airbnb",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "jsx-a11y",
+    "prettier"
+  ],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@", "./src"],
+          ["@assets", "./src/assets"],
+          ["@components", "./src/components"],
+          ["@constants", "./src/constants"],
+          ["@hooks", "./src/hooks"],
+          ["@layouts", "./src/layouts"],
+          ["@modules", "./src/modules"],
+          ["@stores", "./src/stores"],
+          ["@styles", "./src/styles"],
+          ["@utils", "./src/utils"]
+        ],
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".json"]
+      }
+    }
+  },
+  "rules": {
+    "react/no-unstable-nested-components": ["error", { "allowAsProps": true }],
+    "react/no-namespace": 0,
+    "react/prefer-exact-props": 2,
+    "react/no-arrow-function-lifecycle": 0,
+    "react/no-invalid-html-attribute": 0,
+    "react/no-unused-class-component-methods": 0,
+    "import/no-import-module-exports": 0,
+    "import/no-relative-packages": 0,
+    "react/function-component-definition": [2, { "namedComponents": "function-declaration" }],
+    "react/jsx-filename-extension": 0,
+    "no-unused-vars": 2,
+    "max-len": ["warn", 135],
+    "prettier/prettier": ["error", {}, {
+      "usePrettierrc": true  // This tells ESLint to use Prettier's config file
+    }],
+    "react/jsx-props-no-spreading": "off",
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "no-console": "off",
+    "react/require-default-props": "off",
+    "import/extensions": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off"
+  }
+}
