@@ -1,0 +1,449 @@
+{
+    "uuid": "e29f3a0b-6c6d-4b06-9043-44488e074bf1",
+    "lastMigration": 32,
+    "name": "Backend API",
+    "endpointPrefix": "",
+    "latency": 0,
+    "port": 3001,
+    "hostname": "",
+    "folders": [],
+    "routes": [
+        {
+            "uuid": "027fa688-f34a-406a-8fac-e01a4f175112",
+            "type": "http",
+            "documentation": "Use multiple responses with rules",
+            "method": "post",
+            "endpoint": "portal/pub/login",
+            "responses": [
+                {
+                    "uuid": "0fd1cfd4-34fd-4ae2-a05b-d6f3aae35ad4",
+                    "body": "{\n    \"code\": 0,\n    \"msg\": null,\n    \"data\": \"mockToken12345678\",\n    \"debugInfo\": null\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "Default response",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                },
+                {
+                    "uuid": "519e0382-3689-4c3a-87b5-5ab4b5f9f06c",
+                    "body": "{\n  \"Rules example\": \"Content XYZ. Served if route param 'param1' equals 'xyz'. (See in 'Rules' tab)\"\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "Content XYZ",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [
+                        {
+                            "target": "params",
+                            "modifier": "param1",
+                            "value": "xyz",
+                            "invert": false,
+                            "operator": "equals"
+                        }
+                    ],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                },
+                {
+                    "uuid": "6c34934b-c637-443c-8b29-abe514479e98",
+                    "body": "{\n  \"Rules example\": \"Content not found. Served if route param 'param1' is not equal to 'xyz'. (See in 'Rules' tab)\"\n}\n",
+                    "latency": 0,
+                    "statusCode": 404,
+                    "label": "Content not found",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [
+                        {
+                            "target": "params",
+                            "modifier": "param1",
+                            "value": "^(?!.*xyz).*$",
+                            "invert": false,
+                            "operator": "regex"
+                        }
+                    ],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null
+        },
+        {
+            "uuid": "c398bd62-4855-41a8-b2ee-85a4d0ce852a",
+            "type": "http",
+            "documentation": "Use multiple responses with rules",
+            "method": "get",
+            "endpoint": "portal/user/curInfo",
+            "responses": [
+                {
+                    "uuid": "d9928f52-7706-416c-9f9f-5b5f320e2372",
+                    "body": "{\n    \"code\": 0,\n    \"msg\": null,\n    \"data\": {\n        \"userName\": \"管理员\"\n    },\n    \"debugInfo\": null\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "Default response",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "key": "access-control-allow-origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Headers",
+                            "value": "x-user-token, Content-Type, Authorization"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "*"
+                        }
+                    ],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                },
+                {
+                    "uuid": "7a8e70fb-0cb9-45a6-a23c-27b5492da593",
+                    "body": "{\n  \"Rules example\": \"Content XYZ. Served if route param 'param1' equals 'xyz'. (See in 'Rules' tab)\"\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "Content XYZ",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [
+                        {
+                            "target": "params",
+                            "modifier": "param1",
+                            "value": "xyz",
+                            "invert": false,
+                            "operator": "equals"
+                        }
+                    ],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                },
+                {
+                    "uuid": "d910b1f4-cc37-4d83-9402-ac6ee0fdb54a",
+                    "body": "{\n  \"Rules example\": \"Content not found. Served if route param 'param1' is not equal to 'xyz'. (See in 'Rules' tab)\"\n}\n",
+                    "latency": 0,
+                    "statusCode": 404,
+                    "label": "Content not found",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [
+                        {
+                            "target": "params",
+                            "modifier": "param1",
+                            "value": "^(?!.*xyz).*$",
+                            "invert": false,
+                            "operator": "regex"
+                        }
+                    ],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null
+        },
+        {
+            "uuid": "b9aeb9c4-5b1a-4850-a8d3-0aaa2a378369",
+            "type": "http",
+            "documentation": "Use multiple responses with rules",
+            "method": "get",
+            "endpoint": "engine/permission/detail",
+            "responses": [
+                {
+                    "uuid": "284094e9-fa07-490d-b4bf-370223c6f357",
+                    "body": "{\n    \"code\": 0,\n    \"errorCode\": null,\n    \"msg\": null,\n    \"data\": {\n        \"admin\": true,\n        \"permissions\": [\n            \"menu-recruit\"\n        ]\n    },\n    \"debugInfo\": null\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "Default response",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "key": "access-control-allow-origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Headers",
+                            "value": "x-user-token, Content-Type, Authorization"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "*"
+                        }
+                    ],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                },
+                {
+                    "uuid": "b8493235-b88e-4b07-a8a6-751b48524fc0",
+                    "body": "{\n  \"Rules example\": \"Content XYZ. Served if route param 'param1' equals 'xyz'. (See in 'Rules' tab)\"\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "Content XYZ",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [
+                        {
+                            "target": "params",
+                            "modifier": "param1",
+                            "value": "xyz",
+                            "invert": false,
+                            "operator": "equals"
+                        }
+                    ],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                },
+                {
+                    "uuid": "3239fe29-9e10-4d22-82bd-5ab0152dc5e7",
+                    "body": "{\n  \"Rules example\": \"Content not found. Served if route param 'param1' is not equal to 'xyz'. (See in 'Rules' tab)\"\n}\n",
+                    "latency": 0,
+                    "statusCode": 404,
+                    "label": "Content not found",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [
+                        {
+                            "target": "params",
+                            "modifier": "param1",
+                            "value": "^(?!.*xyz).*$",
+                            "invert": false,
+                            "operator": "regex"
+                        }
+                    ],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null
+        },
+        {
+            "uuid": "fff5bb09-6318-4740-b03a-61320fd7b14a",
+            "type": "http",
+            "documentation": "Use multiple responses with rules",
+            "method": "post",
+            "endpoint": "engine/strategyProcess/inquiry",
+            "responses": [
+                {
+                    "uuid": "0888a303-4d72-403c-ad5e-ae6ec1e78ae5",
+                    "body": "{\n    \"code\": 0,\n    \"errorCode\": null,\n    \"msg\": null,\n    \"data\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"asc\": null,\n        \"property\": null,\n        \"totalPages\": 2,\n        \"total\": 11,\n        \"content\": [\n            {\n                \"strategyProcessId\": \"6639a10471666309a47a72e5\",\n                \"name\": \"ces23\",\n                \"scene\": \"LOAN_POST\",\n                \"sceneDesc\": \"贷后\",\n                \"description\": \"ceefe\",\n                \"status\": \"RUNNING\",\n                \"statusDesc\": \"进行中\",\n                \"lastModifiedDate\": 1715052804779,\n                \"lastModifiedName\": \"admin\"\n            },\n            {\n                \"strategyProcessId\": \"6639a0f771666309a47a72e4\",\n                \"name\": \"ces\",\n                \"scene\": \"LOAN_POST\",\n                \"sceneDesc\": \"贷后\",\n                \"description\": \"cese\",\n                \"status\": \"RUNNING\",\n                \"statusDesc\": \"进行中\",\n                \"lastModifiedDate\": 1715052791647,\n                \"lastModifiedName\": \"admin\"\n            },\n            {\n                \"strategyProcessId\": \"6639a08371666309a47a72e3\",\n                \"name\": \"测试\",\n                \"scene\": \"LOAN_POST\",\n                \"sceneDesc\": \"贷后\",\n                \"description\": \"测试\",\n                \"status\": \"RUNNING\",\n                \"statusDesc\": \"进行中\",\n                \"lastModifiedDate\": 1715052675900,\n                \"lastModifiedName\": \"admin\"\n            }\n        ],\n        \"name\": null,\n        \"scene\": null,\n        \"status\": null,\n        \"lastModifiedDateStartTime\": null,\n        \"lastModifiedDateEndTime\": null\n    },\n    \"debugInfo\": null\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "Default response",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                },
+                {
+                    "uuid": "3703c9c5-b443-4cc4-b01e-b82531a47ede",
+                    "body": "{\n  \"Rules example\": \"Content XYZ. Served if route param 'param1' equals 'xyz'. (See in 'Rules' tab)\"\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "Content XYZ",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [
+                        {
+                            "target": "params",
+                            "modifier": "param1",
+                            "value": "xyz",
+                            "invert": false,
+                            "operator": "equals"
+                        }
+                    ],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                },
+                {
+                    "uuid": "9e0a94c9-ed0f-41a7-b4d4-7a3d90854ad7",
+                    "body": "{\n  \"Rules example\": \"Content not found. Served if route param 'param1' is not equal to 'xyz'. (See in 'Rules' tab)\"\n}\n",
+                    "latency": 0,
+                    "statusCode": 404,
+                    "label": "Content not found",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [
+                        {
+                            "target": "params",
+                            "modifier": "param1",
+                            "value": "^(?!.*xyz).*$",
+                            "invert": false,
+                            "operator": "regex"
+                        }
+                    ],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null
+        }
+    ],
+    "rootChildren": [
+        {
+            "type": "route",
+            "uuid": "027fa688-f34a-406a-8fac-e01a4f175112"
+        },
+        {
+            "type": "route",
+            "uuid": "c398bd62-4855-41a8-b2ee-85a4d0ce852a"
+        },
+        {
+            "type": "route",
+            "uuid": "b9aeb9c4-5b1a-4850-a8d3-0aaa2a378369"
+        },
+        {
+            "type": "route",
+            "uuid": "fff5bb09-6318-4740-b03a-61320fd7b14a"
+        }
+    ],
+    "proxyMode": false,
+    "proxyHost": "",
+    "proxyRemovePrefix": false,
+    "tlsOptions": {
+        "enabled": false,
+        "type": "CERT",
+        "pfxPath": "",
+        "certPath": "",
+        "keyPath": "",
+        "caPath": "",
+        "passphrase": ""
+    },
+    "cors": true,
+    "headers": [
+        {
+            "key": "Content-Type",
+            "value": "application/json"
+        },
+        {
+            "key": "Access-Control-Allow-Headers",
+            "value": "x-user-token, Content-Type, Origin, Accept,Authorization,Content-Length, X-Requested-With"
+        },
+        {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+        },
+        {
+            "key": "Access-Control-Allow-Methods",
+            "value": "GET,POST,PUT,DELETE,HEAD,OPTIONS"
+        }
+    ],
+    "proxyReqHeaders": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "proxyResHeaders": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "data": [
+        {
+            "uuid": "4d8d119c-324b-4b6a-8443-50563c3c34f5",
+            "id": "hiss",
+            "name": "Users",
+            "documentation": "",
+            "value": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'string.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]"
+        }
+    ],
+    "callbacks": []
+}
